@@ -384,27 +384,29 @@ export default function Dashboard() {
             </div>
 
             {/* Timer */}
-            <div className="col-span-1 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60 flex flex-col items-center justify-center aspect-square relative overflow-hidden">
-              <h3 className="font-bold text-sm absolute top-5 left-5">Timer</h3>
-              <div className="w-[88px] h-[88px] rounded-full border-[3px] border-dashed border-black/15 flex items-center justify-center mt-6 relative">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-black rounded-full ring-4 ring-[#F3F0E6]"></div>
-                <div className="text-3xl font-black tracking-tighter">22</div>
+            <div className="col-span-1 bg-[#F3F0E6] rounded-[20px] p-4 shadow-sm border border-white/60 flex flex-col aspect-square relative">
+              <h3 className="font-bold text-sm">Timer</h3>
+              <div className="flex-1 flex items-center justify-center">
+                <div className="w-[88px] h-[88px] rounded-full border-[2px] border-dashed border-black/20 flex items-center justify-center relative">
+                  <div className="absolute -top-[3px] left-1/2 -translate-x-1/2 w-2 h-2 bg-black rounded-full ring-4 ring-[#F3F0E6]"></div>
+                  <div className="text-[36px] font-black tracking-tighter leading-none mt-1">22</div>
+                </div>
               </div>
             </div>
 
             {/* Docs */}
-            <div className="col-span-1 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60 flex flex-col aspect-square relative">
-              <h3 className="font-bold text-sm mb-2">Docs</h3>
-              <div className="flex-1 relative mt-3">
-                <div className="absolute top-0 left-2 w-16 h-[76px] bg-white rounded-xl shadow-sm rotate-[-12deg] border border-black/5 p-1">
-                  <Image src="https://picsum.photos/seed/d1/100/150" alt="Doc" width={64} height={80} className="w-full h-full object-cover rounded-lg opacity-60" />
+            <div className="col-span-1 bg-[#F3F0E6] rounded-[20px] p-4 shadow-sm border border-white/60 flex flex-col aspect-square relative overflow-hidden">
+              <h3 className="font-bold text-sm z-20 relative">Docs</h3>
+              <div className="flex-1 relative w-full mt-2">
+                <div className="absolute top-1 left-0 w-[60px] h-[72px] bg-white rounded-xl shadow-sm rotate-[-8deg] border border-black/5 p-1 z-0">
+                  <Image src="https://picsum.photos/seed/d1/100/150" alt="Doc" width={60} height={72} className="w-full h-full object-cover rounded-lg opacity-80" />
                 </div>
-                <div className="absolute top-2 left-7 w-16 h-[76px] bg-white rounded-xl shadow-md rotate-[6deg] border border-black/5 p-1 z-10">
-                  <Image src="https://picsum.photos/seed/d2/100/150" alt="Doc" width={64} height={80} className="w-full h-full object-cover rounded-lg" />
-                  <div className="absolute -top-2 -left-2 w-6 h-6 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[11px] font-bold shadow-sm border border-black/5">9</div>
+                <div className="absolute top-2 left-6 w-[64px] h-[76px] bg-white rounded-xl shadow-md rotate-[8deg] border border-black/5 p-1 z-10">
+                  <Image src="https://picsum.photos/seed/d2/100/150" alt="Doc" width={64} height={76} className="w-full h-full object-cover rounded-lg" />
+                  <div className="absolute -top-2 -left-2 w-6 h-6 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-[11px] font-bold shadow-sm border border-black/5 text-black">9</div>
                 </div>
               </div>
-              <p className="text-[11px] font-medium text-black/50 mt-auto leading-snug">
+              <p className="text-[11px] font-medium text-black/50 mt-auto leading-snug z-20 relative">
                 April<br/>Metup
               </p>
             </div>
