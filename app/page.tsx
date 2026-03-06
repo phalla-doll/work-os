@@ -6,23 +6,9 @@ import Image from 'next/image';
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4 sm:p-8 relative overflow-hidden bg-[#D1CDC7]">
-      {/* Background text */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 flex flex-col justify-between p-8 sm:p-12">
-        <div className="flex justify-between items-start">
-          <h1 className="text-[15vw] font-black leading-[0.8] tracking-tighter text-black/80 m-0 p-0">
-            SAI<sup className="text-[5vw] font-bold align-top top-[-0.5em] relative">®</sup>
-          </h1>
-          <span className="text-2xl sm:text-3xl font-medium text-black/40">AI Human</span>
-        </div>
-        <div className="flex justify-between items-end">
-          <span className="text-2xl sm:text-3xl font-medium text-black/40">AI Human</span>
-          <span className="text-4xl sm:text-5xl font-bold text-black/60">Work OS</span>
-        </div>
-      </div>
-
+    <div className="min-h-screen w-full flex bg-[#F3F0E6]">
       {/* Main App Window */}
-      <div className="relative z-10 w-full max-w-[1440px] h-[85vh] min-h-[800px] bg-[#F3F0E6] rounded-[2rem] shadow-2xl flex overflow-hidden border border-white/40">
+      <div className="w-full h-screen flex overflow-hidden">
         
         {/* Left Icon Bar */}
         <div className="w-20 bg-[#EBE7DD] flex flex-col items-center py-6 border-r border-black/5 shrink-0">
