@@ -11,35 +11,38 @@ export default function Dashboard() {
       <div className="w-full h-screen flex overflow-hidden">
         
         {/* Left Icon Bar */}
-        <div className="w-20 bg-[#EBE7DD] flex flex-col items-center py-6 border-r border-black/5 shrink-0">
-          <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mb-8">
-            <div className="w-5 h-5 border-2 border-white rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full"></div>
+        <div className="w-20 bg-[#EBE7DD] flex flex-col items-center py-6 border-r border-black/5 shrink-0 z-20">
+          {/* Logo */}
+          <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mb-8 shadow-md cursor-pointer hover:scale-105 transition-transform">
+            <div className="flex gap-[2px]">
+              <div className="w-3 h-3 border-[2px] border-white rounded-full"></div>
+              <div className="w-3 h-3 border-[2px] border-white rounded-full -ml-1.5"></div>
             </div>
           </div>
           
-          <div className="flex flex-col items-center gap-6 flex-1">
-            <span className="font-bold text-sm">AI</span>
-            <div className="w-10 h-10 rounded-full bg-black/5 flex items-center justify-center text-black">
-              <MessageSquare size={20} />
-            </div>
-            <div className="w-10 h-10 rounded-full flex items-center justify-center text-black/40 hover:text-black transition-colors cursor-pointer">
-              <CalendarIcon size={20} />
-            </div>
-            <div className="w-10 h-10 rounded-xl bg-[#2A2A2A] flex items-center justify-center text-white cursor-pointer">
-              <Type size={20} />
+          {/* Navigation */}
+          <div className="flex flex-col items-center gap-4 flex-1 w-full">
+            <div className="w-12 h-12 flex items-center justify-center cursor-pointer group">
+              <span className="font-black text-[15px] group-hover:scale-110 transition-transform">AI</span>
             </div>
             
-            <div className="flex flex-col gap-3 mt-4">
-              <Image src="https://picsum.photos/seed/user1/100/100" alt="User" width={32} height={32} className="rounded-full object-cover w-8 h-8 cursor-pointer" />
-              <Image src="https://picsum.photos/seed/user2/100/100" alt="User" width={32} height={32} className="rounded-full object-cover w-8 h-8 grayscale cursor-pointer" />
-              <Image src="https://picsum.photos/seed/user3/100/100" alt="User" width={32} height={32} className="rounded-full object-cover w-8 h-8 cursor-pointer" />
-              <Image src="https://picsum.photos/seed/user4/100/100" alt="User" width={32} height={32} className="rounded-full object-cover w-8 h-8 grayscale opacity-70 cursor-pointer" />
+            <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center text-black cursor-pointer hover:bg-black/10 transition-colors relative">
+              <MessageSquare size={22} fill="currentColor" />
+              <div className="absolute top-3 right-3 w-2 h-2 bg-black rounded-full border-2 border-[#EBE7DD]"></div>
+            </div>
+            
+            <div className="w-12 h-12 rounded-full flex flex-col items-center justify-center text-black/40 hover:text-black hover:bg-black/5 transition-colors cursor-pointer relative group">
+              <CalendarIcon size={22} />
+              <div className="absolute bottom-2 w-1 h-1 bg-black rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            
+            <div className="w-10 h-10 rounded-[12px] bg-[#1A1A1A] flex items-center justify-center text-white cursor-pointer hover:bg-black transition-colors shadow-sm mt-2">
+              <span className="font-serif font-bold text-lg leading-none">Aa</span>
             </div>
           </div>
 
           <div className="mt-auto">
-            <Image src="https://picsum.photos/seed/me/100/100" alt="Me" width={40} height={40} className="rounded-full object-cover w-10 h-10 border-2 border-[#F3F0E6] cursor-pointer" />
+            <Image src="https://picsum.photos/seed/me/100/100" alt="Me" width={40} height={40} className="rounded-full object-cover w-10 h-10 border-2 border-[#EBE7DD] shadow-sm cursor-pointer hover:scale-105 transition-transform" />
           </div>
         </div>
 
