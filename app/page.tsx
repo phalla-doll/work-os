@@ -369,21 +369,26 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Search Picchers */}
+            {/* Action Items */}
             <div className="col-span-2 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60">
-              <h3 className="font-bold text-sm mb-4">Search Picchers</h3>
-              <div className="flex gap-2 mb-4">
-                <div className="w-[72px] h-[72px] rounded-2xl overflow-hidden rotate-[-6deg] shadow-sm border-[3px] border-white bg-white">
-                  <Image src="https://picsum.photos/seed/p1/200/200" alt="Pic" width={72} height={72} className="w-full h-full object-cover rounded-xl" />
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-bold text-sm">Action Items</h3>
+                <span className="text-[10px] font-bold px-2 py-1 bg-[#FF2D20]/10 text-[#FF2D20] rounded-md tracking-wide uppercase">Priority</span>
+              </div>
+              <div className="flex flex-col gap-3.5">
+                <div className="flex items-start gap-3 group cursor-pointer">
+                  <div className="w-4 h-4 rounded border border-black/20 flex items-center justify-center mt-0.5 shrink-0 bg-white group-hover:border-black/40 transition-colors shadow-sm">
+                    <Check size={10} className="text-black opacity-0 group-hover:opacity-100 transition-opacity" strokeWidth={3} />
+                  </div>
+                  <p className="text-xs font-medium text-black/80 leading-snug group-hover:text-black transition-colors">Review desktop dashboard mockups</p>
                 </div>
-                <div className="w-[72px] h-[72px] rounded-2xl overflow-hidden rotate-[6deg] shadow-md border-[3px] border-white -ml-6 z-10 bg-white">
-                  <Image src="https://picsum.photos/seed/p2/200/200" alt="Pic" width={72} height={72} className="w-full h-full object-cover rounded-xl" />
+                <div className="flex items-start gap-3 group cursor-pointer">
+                  <div className="w-4 h-4 rounded border border-black/20 flex items-center justify-center mt-0.5 shrink-0 bg-white group-hover:border-black/40 transition-colors shadow-sm">
+                    <Check size={10} className="text-black opacity-0 group-hover:opacity-100 transition-opacity" strokeWidth={3} />
+                  </div>
+                  <p className="text-xs font-medium text-black/80 leading-snug group-hover:text-black transition-colors">Send feedback to engineering team</p>
                 </div>
               </div>
-              <p className="text-[11px] font-medium text-black/50 leading-snug">
-                to AI<br/>
-                <span className="text-black font-bold text-xs">Your trip with Gojek<br/>on Wednesday</span>
-              </p>
             </div>
 
             {/* Timer */}
