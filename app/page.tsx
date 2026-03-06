@@ -368,7 +368,7 @@ export default function Dashboard() {
 
             {/* Search Picchers */}
             <div className="col-span-2 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60">
-              <h3 className="font-bold text-sm mb-4">Search<br/>Picchers</h3>
+              <h3 className="font-bold text-sm mb-4">Search Picchers</h3>
               <div className="flex gap-2 mb-4">
                 <div className="w-[72px] h-[72px] rounded-2xl overflow-hidden rotate-[-6deg] shadow-sm border-[3px] border-white bg-white">
                   <Image src="https://picsum.photos/seed/p1/200/200" alt="Pic" width={72} height={72} className="w-full h-full object-cover rounded-xl" />
