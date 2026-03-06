@@ -332,13 +332,13 @@ export default function Dashboard() {
 
         {/* Right Panel (Ai Assistant) */}
         <div className="w-[340px] bg-[#EBE7DD] flex flex-col p-6 overflow-y-auto shrink-0 border-l border-black/5">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-8">
             <h2 className="font-bold text-xl">Ai Assistant</h2>
             <div className="flex gap-2">
-              <button className="w-8 h-8 rounded-lg bg-white/50 flex items-center justify-center text-black/60 hover:bg-white transition-colors">
-                <div className="w-3 h-3 border-2 border-current rounded-sm"></div>
+              <button className="w-8 h-8 rounded-lg bg-white/50 flex items-center justify-center text-black/60 hover:bg-white transition-colors shadow-sm border border-white/60">
+                <div className="w-3 h-3 border-2 border-current rounded-[3px]"></div>
               </button>
-              <button className="w-8 h-8 rounded-lg bg-white/50 flex items-center justify-center text-black/60 hover:bg-white transition-colors">
+              <button className="w-8 h-8 rounded-lg bg-white/50 flex items-center justify-center text-black/60 hover:bg-white transition-colors shadow-sm border border-white/60">
                 <Clock size={16} />
               </button>
             </div>
@@ -346,90 +346,93 @@ export default function Dashboard() {
 
           <div className="grid grid-cols-2 gap-4">
             {/* Ai Sumari */}
-            <div className="col-span-2 bg-[#F3F0E6] rounded-2xl p-4 shadow-sm border border-white/60">
-              <div className="flex justify-between items-start mb-4">
+            <div className="col-span-2 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60">
+              <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h3 className="font-bold text-sm">Ai Sumari</h3>
+                  <h3 className="font-bold text-sm mb-0.5">Ai Sumari</h3>
                   <p className="text-xs text-black/40 font-medium">All Massage</p>
                 </div>
               </div>
-              <div className="flex items-end gap-1 h-12 mb-4">
+              <div className="flex items-end gap-[3px] h-12 mb-5">
                 {[30, 45, 20, 60, 80, 50, 40, 70, 90, 30, 50, 60, 40, 80, 100, 70, 50, 40, 60, 30, 45, 20, 60, 80, 50, 40, 70, 90, 30, 50].map((h, i) => (
-                  <div key={i} className="w-1.5 bg-black rounded-full" style={{height: `${h}%`, opacity: i > 15 ? 0.2 : 1}}></div>
+                  <div key={i} className="flex-1 bg-black rounded-full" style={{height: `${h}%`, opacity: i > 15 ? 0.15 : 1}}></div>
                 ))}
               </div>
               <div className="flex items-center justify-between">
-                <button className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform">
-                  <Play size={14} className="ml-0.5" />
+                <button className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform shadow-md">
+                  <Play size={14} className="ml-0.5" fill="currentColor" />
                 </button>
-                <span className="text-xs font-bold">0:19</span>
+                <span className="text-xs font-bold tracking-wide">0:19</span>
               </div>
             </div>
 
             {/* Search Picchers */}
-            <div className="col-span-2 bg-[#F3F0E6] rounded-2xl p-4 shadow-sm border border-white/60">
-              <h3 className="font-bold text-sm mb-3">Search<br/>Picchers</h3>
-              <div className="flex gap-2 mb-3">
-                <div className="w-16 h-16 rounded-xl overflow-hidden rotate-[-5deg] shadow-sm border border-white">
-                  <Image src="https://picsum.photos/seed/p1/200/200" alt="Pic" width={64} height={64} className="w-full h-full object-cover" />
+            <div className="col-span-2 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60">
+              <h3 className="font-bold text-sm mb-4">Search<br/>Picchers</h3>
+              <div className="flex gap-2 mb-4">
+                <div className="w-[72px] h-[72px] rounded-2xl overflow-hidden rotate-[-6deg] shadow-sm border-[3px] border-white bg-white">
+                  <Image src="https://picsum.photos/seed/p1/200/200" alt="Pic" width={72} height={72} className="w-full h-full object-cover rounded-xl" />
                 </div>
-                <div className="w-16 h-16 rounded-xl overflow-hidden rotate-[5deg] shadow-sm border border-white -ml-4 z-10">
-                  <Image src="https://picsum.photos/seed/p2/200/200" alt="Pic" width={64} height={64} className="w-full h-full object-cover" />
+                <div className="w-[72px] h-[72px] rounded-2xl overflow-hidden rotate-[6deg] shadow-md border-[3px] border-white -ml-6 z-10 bg-white">
+                  <Image src="https://picsum.photos/seed/p2/200/200" alt="Pic" width={72} height={72} className="w-full h-full object-cover rounded-xl" />
                 </div>
               </div>
-              <p className="text-xs font-medium text-black/60 leading-tight">
+              <p className="text-[11px] font-medium text-black/50 leading-snug">
                 to AI<br/>
-                <span className="text-black font-bold">Your trip with Gojek<br/>on Wednesday</span>
+                <span className="text-black font-bold text-xs">Your trip with Gojek<br/>on Wednesday</span>
               </p>
             </div>
 
             {/* Timer */}
-            <div className="col-span-1 bg-[#F3F0E6] rounded-2xl p-4 shadow-sm border border-white/60 flex flex-col items-center justify-center aspect-square relative overflow-hidden">
-              <h3 className="font-bold text-sm absolute top-4 left-4">Timer</h3>
-              <div className="w-24 h-24 rounded-full border-4 border-dashed border-black/10 flex items-center justify-center mt-4 relative">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-black rounded-full"></div>
-                <div className="text-2xl font-black">22</div>
+            <div className="col-span-1 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60 flex flex-col items-center justify-center aspect-square relative overflow-hidden">
+              <h3 className="font-bold text-sm absolute top-5 left-5">Timer</h3>
+              <div className="w-[88px] h-[88px] rounded-full border-[3px] border-dashed border-black/15 flex items-center justify-center mt-6 relative">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-black rounded-full ring-4 ring-[#F3F0E6]"></div>
+                <div className="text-3xl font-black tracking-tighter">22</div>
               </div>
             </div>
 
             {/* Docs */}
-            <div className="col-span-1 bg-[#F3F0E6] rounded-2xl p-4 shadow-sm border border-white/60 flex flex-col aspect-square relative">
+            <div className="col-span-1 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60 flex flex-col aspect-square relative">
               <h3 className="font-bold text-sm mb-2">Docs</h3>
-              <div className="flex-1 relative mt-2">
-                <div className="absolute top-0 left-2 w-16 h-20 bg-white rounded-lg shadow-sm rotate-[-10deg] border border-black/5 overflow-hidden">
-                  <Image src="https://picsum.photos/seed/d1/100/150" alt="Doc" width={64} height={80} className="w-full h-full object-cover opacity-50" />
+              <div className="flex-1 relative mt-3">
+                <div className="absolute top-0 left-2 w-16 h-[76px] bg-white rounded-xl shadow-sm rotate-[-12deg] border border-black/5 p-1">
+                  <Image src="https://picsum.photos/seed/d1/100/150" alt="Doc" width={64} height={80} className="w-full h-full object-cover rounded-lg opacity-60" />
                 </div>
-                <div className="absolute top-2 left-6 w-16 h-20 bg-white rounded-lg shadow-md rotate-[5deg] border border-black/5 overflow-hidden z-10">
-                  <Image src="https://picsum.photos/seed/d2/100/150" alt="Doc" width={64} height={80} className="w-full h-full object-cover" />
-                  <div className="absolute top-2 left-2 w-5 h-5 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[10px] font-bold">9</div>
+                <div className="absolute top-2 left-7 w-16 h-[76px] bg-white rounded-xl shadow-md rotate-[6deg] border border-black/5 p-1 z-10">
+                  <Image src="https://picsum.photos/seed/d2/100/150" alt="Doc" width={64} height={80} className="w-full h-full object-cover rounded-lg" />
+                  <div className="absolute -top-2 -left-2 w-6 h-6 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[11px] font-bold shadow-sm border border-black/5">9</div>
                 </div>
               </div>
-              <p className="text-[10px] font-medium text-black/40 mt-auto leading-tight">
+              <p className="text-[11px] font-medium text-black/50 mt-auto leading-snug">
                 April<br/>Metup
               </p>
             </div>
 
             {/* Project */}
-            <div className="col-span-2 bg-[#F3F0E6] rounded-2xl p-4 shadow-sm border border-white/60">
-              <div className="flex items-center justify-between mb-4">
+            <div className="col-span-2 bg-[#F3F0E6] rounded-[20px] p-5 shadow-sm border border-white/60">
+              <div className="flex items-center justify-between mb-5">
                 <h3 className="font-bold text-sm">Project</h3>
-                <Plus size={16} className="text-black/60 cursor-pointer" />
+                <Plus size={16} className="text-black/60 cursor-pointer hover:text-black transition-colors" />
               </div>
               <div className="flex gap-3">
-                <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+                <div className="w-11 h-11 bg-white rounded-2xl shadow-sm flex items-center justify-center cursor-pointer hover:scale-105 transition-transform border border-black/5">
                   <div className="w-5 h-5 bg-[#0052CC] rounded-[4px] flex items-center justify-center">
                     <div className="w-2.5 h-2.5 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-                  <div className="flex gap-0.5">
+                <div className="w-11 h-11 bg-white rounded-2xl shadow-sm flex items-center justify-center cursor-pointer hover:scale-105 transition-transform border border-black/5">
+                  <div className="flex gap-[3px]">
                     <div className="w-2 h-2 rounded-full bg-[#FF3621]"></div>
                     <div className="w-2 h-2 rounded-full bg-[#FF3621] opacity-60"></div>
                     <div className="w-2 h-2 rounded-full bg-[#FF3621] opacity-30"></div>
                   </div>
                 </div>
-                <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-                  <div className="font-serif font-bold text-lg">N</div>
+                <div className="w-11 h-11 bg-white rounded-2xl shadow-sm flex items-center justify-center cursor-pointer hover:scale-105 transition-transform border border-black/5">
+                  <div className="font-serif font-bold text-xl">N</div>
+                </div>
+                <div className="w-11 h-11 bg-transparent rounded-2xl border-2 border-dashed border-black/15 flex items-center justify-center cursor-pointer hover:border-black/30 transition-colors text-black/30">
+                  <Plus size={18} />
                 </div>
               </div>
             </div>
